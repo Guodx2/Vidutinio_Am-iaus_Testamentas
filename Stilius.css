@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Neon', cursive;
+}
+
+/*------Header------*/
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav-dropbtn {
+    background: transparent;
+    color: #dadde7;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width:150px;
+}
+
+.nav-dropbtn i{
+    padding-right: 15px;
+}
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(218,221,231,0.2); 
+    min-width:150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav-dropdown-content a {
+    color: rgba(218,221,231,1);
+    padding: 12px, 16px;
+    text-decoration: none;
+    display:block;
+    text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.nav-dropdown-content a:hover {
+    background-color: rgba(11, 47, 71, 1);
+}
+
+/* Show the dropdown menu on hover */
+.nav-dropdown:hover .nav-dropdown-content {
+    display:block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.nav-dropdown:hover .nav-dropbtn {
+    background-color: rgba(11, 47, 71, 1);
+}
+
+.text-box {
+    width: 90%;
+    color: rgba(218,221,231,1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 54px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: rgba(218,221,231,1);
+}
+
+/*-------Footer-----*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgba(218,221,231,1);
+}
+
+.footer h2{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: rgba(11, 47, 71, 1);
+}
+
+.footer p{
+    color: rgba(11, 47, 71, 1);
+    font-size: 16px;
+}
+
+.row {
+    display:block;
+    margin:auto;
+    width:100px;
+}
+
+.column {
+    padding-top:50px;
+    float:left;
+    width: 50px;
+    margin:auto;
+}
+
+.column i {
+    color: rgba(11, 47, 71, 1);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+/*============ Pradžia ============*/
+
+.header-login{
+    min-height: 1250px;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.login {
+    width: 60%;
+    color: rgba(218,221,231,1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.login h1 {
+    padding-top:300px;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.login h5 {
+    padding-top:14px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: rgba(11, 47, 71, 1);
+}
+
+.login-info {
+    flex-basis: 31%;
+    background: rgba(218,221,231,0.8);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.login-info label {
+    color:rgba(11, 47, 71, 1);
+}
+
+.login-info img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.button {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgba(11, 47, 71, 1);
+    border-radius: 12px;
+}
+
+.button a {
+    text-align: center;
+    text-decoration: none;
+    color:  rgba(218,221,231,1);
+}
+
+.button:hover {
+    background-color: rgba(140,24,31,1);
+}
+
+.button-reg {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgba(218,221,231,1);
+    border-radius: 12px;
+}
+
+.button-reg a {
+    text-align: center;
+    text-decoration: none;
+    color:  rgba(11, 47, 71, 1);
+}
+
+.button-reg:hover {
+    background-color: rgba(140,24,31,1);
+}
+
+/*=========== Registracija ==========*/
+
+.header-register{
+    min-height: 1800px;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.register {
+    width: 60%;
+    color: rgba(218,221,231,1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.register h1 {
+    padding-top:300px;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.register h5 {
+    padding-top:14px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: rgba(11, 47, 71, 1);
+}
+
+.register-info {
+    flex-basis: 31%;
+    background: rgba(218,221,231,0.8);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.register-info img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.register-info label {
+    color:rgba(11, 47, 71, 1);
+}
