@@ -25,6 +25,7 @@ nav{
 nav img{
     width: 100px;
     height: 100px;
+    object-fit: cover;
 }
 
 .nav-dropbtn {
@@ -147,7 +148,7 @@ nav img{
 /*============ Pradžia ============*/
 
 .header-login{
-    min-height: 1250px;
+    min-height: 1000px;
     width: 100%;
     background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
     background-position: center;
@@ -156,7 +157,7 @@ nav img{
 }
 
 .login {
-    width: 60%;
+    width: 40%;
     color: rgba(218,221,231,1);
     position: absolute;
     top: 30%;
@@ -188,13 +189,12 @@ nav img{
     transition: 0.5s;
 }
 
-.login-info label {
-    color:rgba(11, 47, 71, 1);
-}
-
 .login-info img {
-    width: 40%;
-    border-radius: 8px;
+    float: center;
+    width:  50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .button {
@@ -205,7 +205,7 @@ nav img{
     margin: 4px 2px;
     cursor: pointer;
     background-color: rgba(11, 47, 71, 1);
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .button a {
@@ -226,7 +226,7 @@ nav img{
     margin: 4px 2px;
     cursor: pointer;
     background-color: rgba(218,221,231,1);
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .button-reg a {
@@ -242,7 +242,7 @@ nav img{
 /*=========== Registracija ==========*/
 
 .header-register{
-    min-height: 1800px;
+    min-height: 1500px;
     width: 100%;
     background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
     background-position: center;
@@ -268,9 +268,18 @@ nav img{
 
 .register h5 {
     padding-top:14px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgba(11, 47, 71, 1);
+}
+
+.register p {
+    padding-top:14px;
     font-size: 16px;
     padding-bottom: 10px;
     color: rgba(11, 47, 71, 1);
+    float: left;
+    margin-left: 10%;
 }
 
 .register-info {
@@ -284,10 +293,22 @@ nav img{
 }
 
 .register-info img {
-    width: 40%;
-    border-radius: 8px;
+    float: center;
+    width:  50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
-.register-info label {
-    color:rgba(11, 47, 71, 1);
+.register-info input {
+    width: 80%;
+}
+  
+.row-reg {
+    display: flex;
+}
+
+.column-reg {
+    flex: 50%;
+    padding: 10px;
 }

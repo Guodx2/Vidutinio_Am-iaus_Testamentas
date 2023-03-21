@@ -22,6 +22,16 @@
         border-radius: 4px;
         box-sizing: border-box;
     }
+
+    input[type=date], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgba(140,24,31,1);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 </style>
 
 <head>
@@ -42,57 +52,48 @@
     <nav>
         <img src="images/logo1.png"></a>
     </nav>
-
+    
     <div class="register">
         <h1>Registracija</h1>
+
         <div class="register-info">
-            <label for="username">Prisijungimo vardas</label>
-            <br>
-            <input type="text" id="username" placeholder="Username">
-            <br>
-            <label for="password">Slaptažodis</label>
-            <br>
-            <input type="password" id="password" placeholder="Password">
-            <br>
-            <label for="passwordAgain">Pakartokite slaptažodį</label>
-            <br>
-            <input type="password" id="passwordAgain" placeholder="Password">
-            <br>
-            <label for="email">Elektroninis paštas</label>
-            <br>
-            <input type="text" id="email" placeholder="Email">
-            <br>
-            <label for="date">Gimimo data</label>
-            <br>
-            <input type="text" id="date" placeholder="Birth date yyyy-mm-dd">
-            <br>
-            <label for="adress">Gyvenamoji vieta</label>
-            <br>
-            <input type="text" id="adress" placeholder="Adress Street-house city">
-            <br>
-            <label for="id">Asmens kodas</label>
-            <br>
-            <input type="text" id="id" placeholder="National identification number">
-            <br>
-            <label for="name">Vardas</label>
-            <br>
-            <input type="text" id="name" placeholder="First Name">
-            <br>
-            <label for="surname">Pavardė</label>
-            <br>
-            <input type="text" id="surname" placeholder="Last Name">
+            <div class="row-reg">
+                <div class="column-reg">
+                    <h5>Jūsų asmeninė informacija</h5>
+                    <input type="text" placeholder="Vardas">
+                    <br>
+                    <input type="text" placeholder="Pavardė">
+                    <br>
+                    <input type="text" placeholder="Asmens kodas">
+                    <br>
+                    <input type="text" placeholder="Adresas">
+                    <br>
+                    <p>Pasirinkite savo gimimo datą</p>
+                    <input type="date">
+                    <br>
+                </div>
+        
+                <div class="column-reg">
+                    <h5>Paskyros informacija</h5>
+                    <input type="text" placeholder="Elektroninis paštas">
+                    <br>
+                    <input type="text" placeholder="Prisijungimo vardas">
+                    <br>
+                    <input type="password" placeholder="Įveskite slaptažodį">
+                    <br>
+                    <input type="password" placeholder="Pakartokite slaptažodį">
+                </div>
+            </div>
+
             <br>
             <button class="button" type="button"><a href="Home.html">Prisiregistruoti</a></button>
-            <br>
-            <br>
-            <h5>Prisiregistruoti su Facebook</h5>
-            <a href="Home.html"><img src="images/facebook-signup.png"></a>
-            <h5>Prisiregistruoti su Google</h5>
-            <a href="Home.html"><img src="images/google-signup.png"></a>
-            <h5>Prisiregistruoti su elektroniniais valdžios vartais</h5>
-            <a href="Home.html"><img src="images/evaldzia1.png"></a>
+            <h5>Kiti registracijos būdai</h5>
+                <a href="Home.html"><img src="images/Facebook-Logo1.png"></a>
+                <a href="Home.html"><img src="images/google-logo.png"></a>
+                <a href="Home.html"><img src="images/eValdzia-logo.png"></a>
         </div>
     </div>
+
 </section>
 
 <!----------Footer----------->
