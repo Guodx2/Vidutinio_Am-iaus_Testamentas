@@ -1,0 +1,118 @@
+<!DOCTYPE hyml>
+
+<html>
+
+<style>
+    input[type = text], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgba(140, 24, 31, 1);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type = password], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgba(140,24,31,1);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=date], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgba(140,24,31,1);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Paskyros peržiūra</title>
+    <link rel="stylesheet" href="Stilius.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link 
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+</head>
+
+<!-----------Header----------->
+<body>
+<section class="header-account">
+    <nav>
+        <a href="Home.html"><img src="images/logo1.png"></a>
+        <div class="nav-dropdown">
+            <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+            <div class="nav-dropdown-content">
+                <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="account">
+        <h1>Jūsų informacija</h1>
+        <div class="account-info">
+            <div class="row-reg">
+                <div class="column-reg">
+                    <h4>Asmeninė informacija</h4>
+                    <label>Vardas:      </label><br><input style="font-size: 17px" type="text" value="Vardenis" disabled><br>
+                    <label>Pavardė:     </label><br><input style="font-size: 17px" type="text" value="Pavardenis" disabled><br>
+                    <label>Asmens kodas:</label><br><input style="font-size: 17px" type="text" value="47811018611" disabled><br>
+                    <label>Adresas:     </label><br><input style="font-size: 17px" type="text" value="Savanorių pr. 315" disabled><br>
+                    <label>Gimimo data: </label><br><input style="font-size: 17px" type="text" value="06/12/1996" disabled><br>
+                </div>
+        
+                <div class="column-reg">
+                    <h4>Paskyros informacija</h4>
+                    <label>Elektroninis paštas:</label><br><input style="font-size: 17px" type="text" value="vardpav@gmail.com" disabled><br>
+                    <label>Prisijungimo vardas:</label><br><input style="font-size: 17px" type="text" value="vardpav" disabled><br>
+                    <label>Slaptažodis:        </label><br><input style="font-size: 17px" type="password" value="bruh" id="myInput" disabled><br><br>
+                    <input type="checkbox" onclick="myFunction()"><label>  Rodyti slaptažodį</label>
+                    
+                </div>
+            </div>
+        </div>
+        <button class="button-reg" type="button"><a href="Paskyros redagavimas.html">Redaguoti</a></button>
+    </div>   
+</section>
+
+<!----------Footer----------->
+
+<section class="footer">
+    <h2>Nuorodos</h2>
+    <p>Pateikiame nuorodas į aktualiausius puslapius.</p>
+
+    <div class="row">
+        <div class="column"><a href="https://teams.microsoft.com/_#/school/conversations/4?threadId=19:63dc818b06224744989dcf8fe9a6d0c1@thread.tacv2&ctx=channel"><i class="fa-solid fa-people-group"></i></a></div>
+        <div class="column"><a href="https://moodle.ktu.edu/course/view.php?id=3169"><i class="fa-solid fa-book"></i></a></div>
+    </div>
+</section>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+</script>
+
+</body>
+
+</html>

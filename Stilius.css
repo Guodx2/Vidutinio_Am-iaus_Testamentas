@@ -312,3 +312,54 @@ nav img{
     flex: 50%;
     padding: 10px;
 }
+
+/*=========== Paskyros peržiūra ==========*/
+
+.header-account{
+    min-height: 1000px;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.account{
+    width: 70%;
+    color: rgba(218,221,231,1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.account-info{
+    flex-basis: 31%;
+    background: rgba(218,221,231,0.8);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.account h1 {
+    padding-top:300px;
+    font-size: 40px;
+    padding-bottom: 25px;
+}
+
+.account h4 {
+    padding-top:14px;
+    font-size: 25px;
+    padding-bottom: 34px;
+    color: rgba(11, 47, 71, 1);
+}
+
+.account label {
+
+    font-size: 20px;
+    color: rgba(11, 47, 71, 1);
+    text-align: left;
+}
