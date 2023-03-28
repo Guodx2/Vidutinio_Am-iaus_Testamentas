@@ -316,7 +316,7 @@ nav img{
 /*=========== Paskyros peržiūra ==========*/
 
 .header-account{
-    min-height: 1000px;
+    min-height: 1500px;
     width: 100%;
     background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
     background-position: center;
@@ -362,4 +362,27 @@ nav img{
     font-size: 20px;
     color: rgba(11, 47, 71, 1);
     text-align: left;
+}
+
+.account img{
+    width: 25%;
+    object-fit: cover;
+    filter:grayscale(100%);
+}
+
+.button-img {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgba(218,221,231,1);
+    border-radius: 6px;
+    color:rgba(11, 47, 71, 1);
+}
+
+.button-img:hover
+{
+    background-color: rgba(140,24,31,0.5);
 }
