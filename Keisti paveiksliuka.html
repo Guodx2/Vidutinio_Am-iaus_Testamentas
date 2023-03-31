@@ -1,36 +1,12 @@
 <!DOCTYPE hyml>
 
 <html>
-
 <style>
-    input[type = text], select {
-        width: 60%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid rgba(140, 24, 31, 1);
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    input[type = password], select {
-        width: 60%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid rgba(140,24,31,1);
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    input[type=date], select {
-        width: 60%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid rgba(140,24,31,1);
-        border-radius: 4px;
-        box-sizing: border-box;
+    input[type = file], select {
+        color: rgba(11, 47, 71, 1);
     }
 </style>
+
 
 <head>
     <meta charset="utf-8">
@@ -68,26 +44,12 @@
         <div class="account-info">
             <div class="row-reg">
                 <div class="column-reg">
-                    <h4>Asmeninė informacija</h4>
+                    <h4>Nuotraukos pakeitimas</h4>
                     <img src="images/magija_sokoladinis.png"><br>
                     <br>
-                    <a href="Keisti paveiksliuka.html"><button class="button-img" type="button">Keisti paveiksliuką</button></a>
-                    <br>
-                    <br>
-                    <label>Vardas:      </label><br><input style="font-size: 17px" type="text" value="Vaškės"><br>
-                    <label>Pavardė:     </label><br><input style="font-size: 17px" type="text" value="Sūrelis"><br>
-                    <label>Asmens kodas:</label><br><input style="font-size: 17px" type="text" value="50204206911" disabled><br>
-                    <label>Adresas:     </label><br><input style="font-size: 17px" type="text" value="Verkių g. 1"><br>
-                    <label>Gimimo data: </label><br><input style="font-size: 17px"type="text" value="2002-04-20" disabled><br>
-                </div>
-        
-                <div class="column-reg">
-                    <h4>Paskyros informacija</h4>
-                    <label>Elektroninis paštas:</label><br><input style="font-size: 17px" type="text" value="varsur@gmail.com"><br>
-                    <label>Prisijungimo vardas:</label><br><input style="font-size: 17px" type="text" value="varsur"><br>
-                    <label>Slaptažodis:        </label><br><input style="font-size: 17px" type="password" value="password123" id="myInput"><br><br>
-                    <input type="checkbox" onclick="myFunction()"><label>  Rodyti slaptažodį</label>
-                    
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <button class="button-img-select" onclick="document.getElementById('getFile').click()">Pasirinkite nuotrauką</button>
+                    <input type='file' id="getFile" style="display:none">
                 </div>
             </div>
         </div>  
@@ -106,17 +68,6 @@
         <div class="column"><a href="https://moodle.ktu.edu/course/view.php?id=3169"><i class="fa-solid fa-book"></i></a></div>
     </div>
 </section>
-
-<script>
-    function myFunction() {
-      var x = document.getElementById("myInput");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-</script>
 
 </body>
 

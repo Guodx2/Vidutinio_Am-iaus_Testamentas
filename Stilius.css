@@ -358,7 +358,6 @@ nav img{
 }
 
 .account label {
-
     font-size: 20px;
     color: rgba(11, 47, 71, 1);
     text-align: left;
@@ -385,4 +384,49 @@ nav img{
 .button-img:hover
 {
     background-color: rgba(140,24,31,0.5);
+}
+
+input::file-selector-button {
+    color: rgba(11, 47, 71, 1);
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+    width: 40%;
+    cursor: pointer;
+}
+
+input::file-selector-button:hover {
+    color: rgba(11, 47, 71, 1);
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+    width: 40%;
+    cursor: pointer;
+    background-color: rgba(140,24,31,0.5);
+}
+
+.column-reg label {
+    font-size: 16px;
+    color: rgba(11, 47, 71, 1);
+}
+
+.fa-file-circle-plus {
+    font-size: 25px;
+    color:rgba(11, 47, 71, 1);
+}
+
+.button-img-select {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgba(11, 47, 71, 0.9);
+    border-radius: 6px;
+    color:rgba(218,221,231,1);
+}
+
+.button-img-select:hover {
+    background-color: rgba(140,24,31,1);
 }
