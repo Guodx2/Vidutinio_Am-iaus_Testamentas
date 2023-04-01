@@ -260,6 +260,7 @@ button:hover{
 
 .laidojimas{
     width: 100%;
+    color: rgba(11, 47, 71, 1);
     margin: auto;
     text-align: center;
     padding-top: 50px;
