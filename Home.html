@@ -2,6 +2,25 @@
 
 <html>
 
+<style>
+input[type = radio], select {
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+input[type = text], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin-left: 50px;
+        border: 1px solid rgba(140, 24, 31, 1);
+        border-radius: 4px;
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+    }
+</style>
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -23,11 +42,14 @@
 <section class="header">
     <nav>
         <a href="Home.html"><img src="images/logo1.png"></a>
-        <div class="nav-dropdown">
-            <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
-            <div class="nav-dropdown-content">
-                <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
-                <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+        <div class="menu-bar">
+            <a href="#klausimynas"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+                <div class="nav-dropdown-content">
+                    <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                    <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -35,6 +57,25 @@
     <div class="text-box">
         <h1>Gyvenimo pabaigos planuoklis</h1>
         <p>Maloniai kviečiame susiplanuoti savo paskutinę kelionę ir taip ne tik užtikrinti išpildytą <br> savo paskutinį norą, bet taip pat ir sutaupyti daug savo artimųjų streso!</p>
+    </div>
+</section>
+
+<!----------Klausimynas----------->
+
+<section class="klausimynas" id="klausimynas">
+    <h1>Kviečiame užpildyti šį klausimyną ir sužinoti, kokia religija Jums, kaip asmenybei, tinka labiausiai!</h1>
+    <h2>Tai žinodami nesunkiai galėsite pradėti savo paskutinės kelionės organizavimą.</h2>
+    <div class="klausimas">
+        <div class="quiz-container">
+            <div id="quiz">
+            </div>
+        </div>
+        <button id="previous" style="margin-right:30px"><i class="fa-solid fa-arrow-left"></i>Ankstesnis klausimas</button>
+        <button id="next"></i>Kitas klausimas<i class="fa-solid fa-arrow-right"></i></button>
+        <a href="Gauta religija.html"><button id="submit"><i class="fa-solid fa-check"></i>Pateikti</button>
+        <div id="results"></div>
+        <br>
+        <br>
     </div>
 </section>
 
@@ -51,5 +92,246 @@
 </section>
 
 </body>
+
+<script>
+    (function(){
+    // Functions
+    function buildQuiz(){
+        // variable to store the HTML output
+        const output = [];
+
+        // for each question...
+        myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
+
+            // variable to store the list of possible answers
+            const answers = [];
+
+            // and for each available answer...
+            for(letter in currentQuestion.answers){
+
+            // ...add an HTML radio button
+            answers.push(
+                `<label>
+                <input type="radio" name="question${questionNumber}">
+                ${currentQuestion.answers[letter]}
+                <br>
+                </label>`
+            );
+            }
+
+            // add this question and its answers to the output
+            output.push(
+            `<div class="slide">
+                <div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join("")}</div>
+            </div>`
+            );
+        }
+        );
+
+        // finally combine our output list into one string of HTML and put it on the page
+        quizContainer.innerHTML = output.join('');
+    }
+
+    function showResults(){
+
+        // for each question...
+        myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+        // find selected answer
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;})
+    }
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active-slide');
+        slides[n].classList.add('active-slide');
+        currentSlide = n;
+        if(currentSlide === 0){
+        previousButton.style.display = 'none';
+        }
+        else{
+        previousButton.style.display = 'inline-block';
+        }
+        if(currentSlide === slides.length-1){
+        nextButton.style.display = 'none';
+        submitButton.style.display = 'inline-block';
+        }
+        else{
+        nextButton.style.display = 'inline-block';
+        submitButton.style.display = 'none';
+        }
+    }
+
+    function showNextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function showPreviousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Variables
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const submitButton = document.getElementById('submit');
+    const myQuestions = [
+        {
+            question: "1. Kuriuo iš šių dalykų, susijusių su pomirtiniu gyvenimu, tikite?",
+            answers: {
+                a: "Reinkarnacija",
+                b: "Rojus ir pragaras",
+                c: "Nustojame egzistuoti",
+                d: "Kita"
+            },
+        },
+        {
+            question: "2. Kuris iš šių dalykų geriausiai apibūdina jūsų įsitikinimus apie Dievo (-ų) egzistavimą?",
+            answers: {
+                a: "Monoteizmas (tikėjimas vienu Dievu)",
+                b: "Politeizmas (tikėjimas į kelis dievus)",
+                c: "Ateizmas (netikėjimas Dievu (-ais))",
+                d: "Kita"
+            },
+        },
+        {
+            question: "3. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į žmogaus gyvenimo tikslą?",
+            answers: {
+                a: "Tarnauti ir garbinti Dievą (-us)",
+                b: "Pasiekti nušvitimą",
+                c: "Įgyvendinti asmeninius tikslus ir norus",
+                d: "Kita"
+            },
+        },
+        {
+            question: "4. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į religijos vaidmenį visuomenėje?",
+            answers: {
+                a: "Religija turėtų būti visuomenės pagrindas",
+                b: "Religija turėtų egzistuoti kartu su kitomis kultūrinėmis praktikomis",
+                c: "Religija turi būti atskirta nuo valdžios ir institucijų",
+                d: "Kita"
+            },
+        },
+        {
+            question: "5. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į nuodėmės sampratą?",
+            answers: {
+                a: "Nuodėmė yra Dievo įstatymų pažeidimas",
+                b: "Nuodėmė yra socialinis konstruktas",
+                c: "Nuodėmė yra asmeninis pasirinkimas, turintis įtakos sau pačiam",
+                d: "Kita"
+            },
+        },
+        {
+            question: "6. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į išganymo sampratą?",
+            answers: {
+                a: " Išganymas pasiekiamas per tikėjimą Dievu (-ais)",
+                b: "Išganymas pasiekiamas gerais darbais ir moraliniu gyvenimu",
+                c: "Išganymas nėra būtinas pilnaverčiam gyvenimui",
+                d: "Kita"
+            },
+        },
+        {
+            question: "7. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į mokslo ir religijos ryšį?",
+            answers: {
+                a: "Mokslas ir religija gali egzistuoti kartu",
+                b: "Mokslas ir religija prieštarauja",
+                c: "Mokslas ir religija nesusiję",
+                d: "Kita"
+            },
+        },
+        {
+            question: "8. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į moterų vaidmenį religinėse institucijose?",
+            answers: {
+                a: "Moterys turėtų turėti lygias galimybes ir turėti lyderio vaidmenis",
+                b: "Moterys turėtų turėti ribotus vaidmenis ir pareigas",
+                c: "Moterys neturėtų turėti jokių vaidmenų ar pareigų",
+                d: "Kita"
+            },
+        },
+        {
+            question: "9. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į religinių tekstų naudojimą vadovaujantis asmeniniais įsitikinimais ir praktika?",
+            answers: {
+                a: "Religiniai tekstai yra didžiausias tikėjimo ir praktikos autoritetas",
+                b: "Religiniai tekstai yra vertingi vadovai, bet turėtų būti interpretuojami šiuolaikiniame kontekste",
+                c: "Religiniai tekstai yra tik vienas iš daugelio patarimų",
+                d: "Kita"
+            },
+        },
+        {
+            question: "10. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į ritualų ir ceremonijų naudojimą religinėje praktikoje?",
+            answers: {
+                a: "Ritualas ir ceremonija yra esminiai religinės praktikos komponentai",
+                b: "Ritualas ir ceremonija yra naudingi, bet nebūtini",
+                c: "Ritualas ir ceremonija yra pasenę ir nereikalingi",
+                d: "Kita"
+            },
+        },
+        {
+            question: "11. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į asmens ir bendruomenės santykį religinėje praktikoje?",
+            answers: {
+                a: "Svarbiausias yra asmeninis dvasinis augimas, o bendruomeniškumas yra antraeilis dalykas",
+                b: "Bendruomenės garbinimas ir praktika yra pagrindinis dėmesys, o individualus dvasinis augimas yra antraeilis dalykas",
+                c: "Tiek individo, tiek bendruomenės dvasinis augimas yra vienodai svarbūs",
+                d: "Kita"
+            },
+        },
+        {
+            question: "12. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į simbolikos naudojimą religinėje praktikoje?",
+            answers: {
+                a: "Simbolika yra svarbi religinės praktikos dalis ir turėtų būti suprantama pažodžiui",
+                b: "Simbolizmas yra svarbi religinės praktikos dalis, bet turėtų būti aiškinama metaforiškai",
+                c: "Religinėje praktikoje simbolika nebūtina",
+                d: "Kita"
+            },
+        },
+        {
+            question: "13. Kuris iš šių teiginių geriausiai apibūdina jūsų požiūrį į religinio lyderio ar autoriteto vaidmenį religinėje praktikoje?",
+            answers: {
+                a: "Religinis lyderis arba autoritetas yra būtinas aiškinant ir vadovaujant religinei praktikai",
+                b: "Religinis lyderis arba autoritetas yra svarbus, bet neturėtų būti vienintelis autoritetas",
+                c: "Religinis lyderis ar autoritetas nebūtinas religinėje praktikoje",
+                d: "Kita"
+            },
+        },
+        {
+            question: "14. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į religijos ir politikos santykį?",
+            answers: {
+                a: "Religija turėtų vadovautis politiniais sprendimais",
+                b: "Religija neturėtų daryti įtakos politiniams sprendimams",
+                c: "Religija turėtų padėti priimti politinius sprendimus, bet nebūtinai juos vadovauti",
+                d: "Kita"
+            },
+        },
+        {
+            question: "15. Kuris iš šių dalykų geriausiai apibūdina jūsų požiūrį į tikėjimo sampratą?",
+            answers: {
+                a: "Tikėjimas būtinas religinei praktikai ir dvasiniam augimui",
+                b: "Tikėjimas yra asmeninis pasirinkimas ir gali būti nereikalingas dvasiniam augimui",
+                c: "Tikėjimas nėra svarbus dvasiniam augimui",
+                d: "Kita"
+            },
+        }
+    ];
+
+    // Kick things off
+    buildQuiz();
+
+    // Pagination
+    const previousButton = document.getElementById("previous");
+    const nextButton = document.getElementById("next");
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    // Show the first slide
+    showSlide(currentSlide);
+
+    // Event listeners
+    submitButton.addEventListener('click', showResults);
+    previousButton.addEventListener("click", showPreviousSlide);
+    nextButton.addEventListener("click", showNextSlide);
+    })();
+</script>
 
 </html>
