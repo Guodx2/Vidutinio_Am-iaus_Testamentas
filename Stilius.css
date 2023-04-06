@@ -222,7 +222,6 @@ button:hover{
 /*----------Gauta religija-------*/
 
 .uzpildytas-klausimynas {
-    background-color: rgba(11, 47, 71, 0.8);
     width: 100%;
     margin: auto;
     text-align: center;
@@ -233,7 +232,7 @@ button:hover{
 
 .religija {
     flex-basis: 31%;
-    background: rgba(254, 215, 102, 0.65);
+    background: rgba(254, 215, 102,1);
     color:rgba(11, 47, 71, 1);
     float:center;
     width: 40%;
@@ -250,8 +249,17 @@ button:hover{
 
 /*-----------Laidojimo būdai----------*/
 
+.header-laidojimas{
+    min-height: 250px;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 47, 71, 0.5), rgba(11, 47, 71, 0.5)), url(images/fonas.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
 .eil {
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: space-between;
     margin-left:10px;
@@ -264,13 +272,12 @@ button:hover{
     margin: auto;
     text-align: center;
     padding-top: 50px;
-    background-color: rgba(218,221,231,1);
+    background-color: rgba(218,221,231,0.2);
 }
 
 .st{
     flex-basis: 32%;
     border-radius: 10px;
-    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
 }
@@ -307,12 +314,21 @@ button:hover{
     position: absolute;
     opacity: 0;
     transform: 0.5s;
-
 }
 
 .layer:hover h3{
     bottom: 49%;
     opacity: 1;
+}
+
+.patiekalai{
+    width: 100%;
+    height: 2000px;
+    color: rgba(11, 47, 71, 1);
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgba(218,221,231,0.2);
 }
 
 /*-------Footer-----*/
@@ -362,6 +378,74 @@ button:hover{
     clear:both;
 }
 
+.uzsakyti {
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 60px;
+    cursor: pointer;
+    background-color: rgba(11, 47, 71, 1);
+    border-radius: 6px;
+    color:rgba(218,221,231,1);
+}
+
+.uzsakyti a {
+    text-align: center;
+    text-decoration: none;
+    color:  rgba(218,221,231,1);
+}
+
+.uzsakyti:hover {
+    background-color: rgba(140,24,31,1);
+}
+
+.Valtis1 {
+    width: 100%;
+    height: 300px;
+    color: rgba(218,221,231,1);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Valtis2 {
+    width: 100%;
+    height: 400px;
+    color: rgba(218,221,231,1);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Valtis3 {
+    width: 100%;
+    height: 450px;
+    color: rgba(218,221,231,1);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Valtis4 {
+    width: 100%;
+    height: 500px;
+    color: rgba(218,221,231,1);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.pasirinkimas {
+    background: rgba(232, 136, 115, 0.5);
+    float: center;
+    width: 30%;
+    height: auto;
+    margin-left: 35%;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
 /*============ Pradžia ============*/
 
 .header-login{
@@ -639,9 +723,9 @@ input::file-selector-button:hover {
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: rgba(11, 47, 71, 0.9);
+    background-color: rgba(218,221,231,1);
     border-radius: 6px;
-    color:rgba(218,221,231,1);
+    color:rgba(11, 47, 71, 1);
 }
 
 .button-img-select:hover {

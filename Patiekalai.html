@@ -1,0 +1,277 @@
+<!DOCTYPE hyml>
+
+<html>
+
+<style>
+input[type = radio], select {
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+input[type = text], select {
+        width: 60%;
+        padding: 12px 20px;
+        margin-left: 50px;
+        border: 1px solid rgba(140, 24, 31, 1);
+        border-radius: 4px;
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+}
+
+.quantity-btn {
+    background-color:rgba(11, 47, 71, 1);
+    padding: 10px;
+    width: 7%;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.quantity-btn:hover {
+    background-color:rgba(140,24,31,0.8);
+    transform: scale(1.1);
+}
+
+.quantity-input {
+    max-width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(140,24,31,1);
+    border-radius: 8px;
+    outline: none;
+}
+</style>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Gyvenimo Pabaigos Planuoklis</title>
+    <link rel="stylesheet" href="Stilius.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link 
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+</head>
+
+<!-----------Header----------->
+<body>
+<section class="header-laidojimas">
+    <nav>
+        <a href="Home.html"><img src="images/logo1.png"></a>
+        <div class="menu-bar">
+            <a href="Laidojimo budai.html"><button class="menu-button"><i class="fa-solid fa-church"></i>Laidojimas</button></a>
+            <a href="Home.html"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+                <div class="nav-dropdown-content">
+                    <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                    <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!----------Laidojimo būdai----------->
+
+<section class="patiekalai">
+    <h1>Laikas pasirinkti patiekalus, kurie lepins Jūsų svečių skrandžius apeigose!</h1>
+    <div class="eil">
+        <div class="st">
+            <img src="images/Kottbullar">
+            <div class="layer">
+                <h3>Köttbullar – mėsos kotletai, kurių išorė yra traški, o vidus minkštas ir švelnus. Kotletus paprastai sudaro jautiena, sumaišyta su kiauliena arba veršiena, o derinys paprastai pagardinamas svogūnais, druska ir pipirais.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Lutefisk">
+            <div class="layer">
+                <h3>Lutefisk – Skandinaviškas patiekalas iš džiovintų sykų, apdorotų šarmu, todėl žuvis yra kaip želatinas. Paprastai patiekiamas su virtomis bulvėmis, trintais žaliaisiais žirneliais, lydytu sviestu ir keptos šoninės gabalėliais</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Artsoppa">
+            <div class="layer">
+                <h3>Ärtsoppa – Tradicinė Švediška geltonųjų pupelių sriuba. Kiti ingredientai yra ploni rausvos druskos kiaulienos griežinėliai ir prieskoniai, tokie kaip svogūnai, mairūnai, imbieras ir gvazdikėliai. Tekstūra tiršta, panaši į troškinį.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 4.2 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 3.9 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 4 €</label>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <img src="images/Prinsesstarta">
+            <div class="layer">
+                <h3>Prinsesstårta - Klasikinis švediškas pyragas sudarytas iš biskvito sluoksnių, padengtų vanilės skonio sviestiniu kremu</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Stegt flaesk">
+            <div class="layer">
+                <h3>Stegt flæsk - Esminis danų patiekalas, kurį sudaro kepta, gruzdinta arba orkaitėje kepta kiaulienos papilvė. Tiršti ir traškūs kiaulienos papilvės griežinėliai tradiciškai patiekiami kartu su virtomis bulvėmis ir kvapniu petražolių padažu.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Smorgastarta">
+            <div class="layer">
+                <h3>Smörgåstårta – Švediškas sluoksniuotas pyragas, susidedantis iš sumuštinių: baltos arba ruginės duonos riekelių, užpilų ir įdarų, apteptų kreminiu sūriu, majonezu, jogurtu ar deriniu ir papuoštas įvairiomis daržovėmis.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 4.5 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 5.9 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 6.9 €</label>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <img src="images/Palt">
+            <div class="layer">
+                <h3>Palt - Populiarūs švediški koldūnai, gaminami su tarkuotomis žaliomis bulvėmis ir įvairiais įdarais.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Blodpudding">
+            <div class="layer">
+                <h3>Blodpudding - Švediškas patiekalas, pagamintas iš gyvūnų kraujo. Paprastai jis ruošiamas su kiaulės krauju, kuris sumaišomas su miltais, alumi arba svagdricka, sviestu ir prieskoniais, tada kepamas orkaitėje.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Lapskaus">
+            <div class="layer">
+                <h3>Lapskaus - norvegiškas troškinys, gaminamas iš jautienos (aviena, kiauliena ir vištiena taip pat yra tinkami variantai), svogūnų, bulvių, morkų, salierų, rūtų sultinio, sultinio, miltų (nebūtina), lauro lapų, čiobrelių, druskos ir pipirų.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 3.2 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 5 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 5.5 €</label>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <img src="images/Rodkal">
+            <div class="layer">
+                <h3>Rødkål - Daniškas patiekalas, sudarytas iš raudoniųjų kopūstų, kurie trumpai užplikomi su raudonųjų serbentų sultimis, actu, cukrumi ir įvairiais prieskoniais.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Sodd">
+            <div class="layer">
+                <h3>Sodd - Norvegijos nacionalinis patiekalas, kurį paprastai sudaro kubeliais pjaustyta aviena, mėsos kukuliai (iš jautienos, avienos ar avienos), morkos ir bulvės, patiekiamos skaidraus kvapnaus sultinio.</h3>
+            </div>
+        </div>
+        <div class="st">
+            <img src="images/Medisterkaker">
+            <div class="layer">
+                <h3>Medisterkaker – Tradicinis norvegų patiekalas, susidedantis iš kiaulienos kukulių. Mėsos kukuliai, pagaminti iš maltos kiaulienos, miltų, kiaušinių, druskos, muskato riešuto, imbiero, pieno, juodųjų pipirų ir aliejaus.</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="eil">
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 4.2 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 6.9 €</label>
+        </div>
+        <div class="st">
+            <label>Kiekis</label>
+            <input type="number" class="quantity-input" value="0" min="0">
+            <label style="margin-left:80px">Kaina: 5 €</label>
+        </div>
+    </div>
+
+    <a href="Kapaviete.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti užsakymą</button></a>
+</section>
+
+<!----------Footer----------->
+
+<section class="footer">
+    <h2>Nuorodos</h2>
+    <p>Pateikiame nuorodas į aktualiausius puslapius.</p>
+
+    <div class="row">
+        <div class="column"><a href="https://teams.microsoft.com/_#/school/conversations/4?threadId=19:63dc818b06224744989dcf8fe9a6d0c1@thread.tacv2&ctx=channel"><i class="fa-solid fa-people-group"></i></a></div>
+        <div class="column"><a href="https://moodle.ktu.edu/course/view.php?id=3169"><i class="fa-solid fa-book"></i></a></div>
+    </div>
+</section>
+
+</body>
+
+<script>
+    function changeQuantity(value) {
+      var input = document.querySelector('.quantity-input');
+      var currentQuantity = parseInt(input.value);
+      var newQuantity = currentQuantity + value;
+
+      if (newQuantity < parseInt(input.min) || newQuantity > parseInt(input.max)) {
+        return;
+      }
+
+      input.value = newQuantity;
+    }
+</script>
+
+</html>
