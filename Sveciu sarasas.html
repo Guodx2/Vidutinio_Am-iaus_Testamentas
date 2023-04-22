@@ -1,0 +1,86 @@
+<!DOCTYPE hyml>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Gyvenimo Pabaigos Planuoklis</title>
+    <link rel="stylesheet" href="Stilius.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link 
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+</head>
+
+<!-----------Header----------->
+<body>
+<section class="header-laidojimas">
+    <nav>
+        <a href="Home.html"><img src="images/logo1.png"></a>
+        <div class="menu-bar">
+            <a href="Laidojimo budai.html"><button class="menu-button"><i class="fa-solid fa-church"></i>Laidojimas</button></a>
+            <a href="Home.html"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+                <div class="nav-dropdown-content">
+                    <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                    <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!----------Svečių sąrašas----------->
+
+<section class="sveciu-sarasas">
+    <label class="sveciai" for="story"><strong>👨‍👩‍👧‍👦 Čia galite sudaryti savo svečių sąrašą: 👩‍👩</strong></label>
+    <textarea id="story" name="story" rows="5" cols="33">
+        1️⃣ Mantvydas Mantvydaitis
+        2️⃣ Mažvydas Mažvydaitis
+        3️⃣ Guoda Guodaitė
+        4️⃣ Mantas Mantaitis
+        5️⃣ Vaidotas Vaidotaitis
+        6️⃣ Lina Linaitė
+        ...
+    </textarea>
+    <br>
+    <a href="Apeigos.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti svečių sąrašą</button></a>
+</section>
+
+
+<!----------Footer----------->
+
+<section class="footer">
+    <h2>Nuorodos</h2>
+    <p>Pateikiame nuorodas į aktualiausius puslapius.</p>
+
+    <div class="row">
+        <div class="column"><a href="https://teams.microsoft.com/_#/school/conversations/4?threadId=19:63dc818b06224744989dcf8fe9a6d0c1@thread.tacv2&ctx=channel"><i class="fa-solid fa-people-group"></i></a></div>
+        <div class="column"><a href="https://moodle.ktu.edu/course/view.php?id=3169"><i class="fa-solid fa-book"></i></a></div>
+    </div>
+</section>
+
+</body>
+
+<script>
+    function changeQuantity(value) {
+      var input = document.querySelector('.quantity-input');
+      var currentQuantity = parseInt(input.value);
+      var newQuantity = currentQuantity + value;
+
+      if (newQuantity < parseInt(input.min) || newQuantity > parseInt(input.max)) {
+        return;
+      }
+
+      input.value = newQuantity;
+    }
+</script>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE hyml>
+
+<html>
+
+<style>
+    *{
+        color: rgba(11, 47, 71, 1);
+    }
+
+    ul {
+        list-style-type: none;
+        background-color: rgba(232, 136, 115, 0.3);
+        width: 90%;
+        margin:auto;
+        border-radius: 8px;
+    }
+
+    li {
+        display: inline-block;
+        margin: 50px;
+    }
+
+    input[type="checkbox"][id^="myCheckbox"] {
+        display: none;
+    }
+
+    label {
+        padding: 10px;
+        display: block;
+        position: relative;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    label:before {
+        background-color: white;
+        color: white;
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        border: 1px solid grey;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 28px;
+        transition-duration: 0.4s;
+        transform: scale(0);
+    }
+
+    label img {
+        height: 300px;
+        width: 300px;
+        transition-duration: 0.2s;
+        transform-origin: 50% 50%;
+        object-fit: cover;
+    }
+
+    :checked + label {
+        border-color: #ddd;
+    }
+
+    :checked + label:before {
+        content: "✓";
+        background-color: grey;
+        transform: scale(1);
+    }
+
+    :checked + label img {
+        transform: scale(0.9);
+        z-index: -1;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Gyvenimo Pabaigos Planuoklis</title>
+    <link rel="stylesheet" href="Stilius.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link 
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+    rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+</head>
+
+<!-----------Header----------->
+<body>
+<section class="header-laidojimas">
+    <nav>
+        <a href="Home.html"><img src="images/logo1.png"></a>
+        <div class="menu-bar">
+            <a href="Laidojimo budai.html"><button class="menu-button"><i class="fa-solid fa-church"></i>Laidojimas</button></a>
+            <a href="Home.html"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
+            <div class="nav-dropdown">
+                <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+                <div class="nav-dropdown-content">
+                    <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                    <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!-----------Laidotuviu apeigu organizavimas-------------->
+
+<section class="apeigos">
+    <h2>Susikurkite savo laidojimo apeigas patys!</h2>
+    <br>
+    <br>
+    <br>
+
+    <div class="apeigos-info">
+        <h3>🎵 Raudotojai ir giedotojai 💧</h3>
+        <br>
+        <br>
+        <div class="row-apeigos">
+            <div class="column-apeigos">
+                <h4>😭 Pasirinkite raudotojų skaičių</h4><br>
+                <input type="range" value="12" min="0" max="100" style="width:200px" oninput="this.nextElementSibling.value = this.value">
+                <output>12</output>
+            </div>
+    
+            <div class="column-apeigos">
+                <h4>🎤 Pasirinkite giedotojų skaičių</h4><br>
+                <input type="range" value="12" min="0" max="100" style="width:200px" oninput="this.nextElementSibling.value = this.value">
+                <output>12</output>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="apeigos-info">
+        <h3>🎵 Pasirinkite laidotuvių muziką</h3>
+        <br>
+        <br>
+        <audio controls>
+            <source src="Coffin Dance (Official Music Video HD).mp3" type="audio/mpeg"> 
+        </audio>
+
+        <br><br><br>
+        <h3>♻ Pakeisti įrašą: </h3>
+        <br>
+        <input type="file" accept=".mp3">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <br>
+        <h3>🦯 Išsirinkite raudotojų ir giedotojų dirigentą</h3>
+        <li>
+          <input type="checkbox" id="myCheckbox1" checked/>
+          <label for="myCheckbox1"><img src="images/sir-colin-davis-1927-2013-1365982664-view-1.png" /></label>
+          <label for="myCheckbox1"><strong>Sir Colin Davis</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox2" />
+          <label for="myCheckbox2"><img src="images/marin-alsop-1374682692-view-1.png" /></label>
+          <label for="myCheckbox2"><strong>Marin Alsop</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox3" />
+          <label for="myCheckbox3"><img src="images/gustavo-dudamel-1314974513-view-2.png" /></label>
+          <label for="myCheckbox3"><strong>Gustavo Dudame</strong></label>
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <br>
+        <h3>🤵 Išsirinkite apeigų šventės vedėją 🤣</h3>
+        <li>
+          <input type="checkbox" id="myCheckbox4"/>
+          <label for="myCheckbox4"><img src="images/doge" /></label>
+          <label for="myCheckbox4"><strong>Ken-kun</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox5" checked/>
+          <label for="myCheckbox5"><img src="images/bear" /></label>
+          <label for="myCheckbox5"><strong>Bear Grylls</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox6" />
+          <label for="myCheckbox6"><img src="images/grump.jpg" /></label>
+          <label for="myCheckbox6"><strong>Tardar Sauce</strong></label>
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <br>
+        <h3>📿 Išsirinkite apeigų vedėją 🕋</h3>
+        <li>
+          <input type="checkbox" id="myCheckbox7"/>
+          <label for="myCheckbox7"><img src="images/Odin-Borson"/></label>
+          <label for="myCheckbox7"><strong>Odinas</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox8" />
+          <label for="myCheckbox8"><img src="images/hela.webp"/></label>
+          <label for="myCheckbox8"><strong>Hela</strong></label>
+        </li>
+        <li>
+      
+          <input type="checkbox" id="myCheckbox9" checked/>
+          <label for="myCheckbox9"><img src="images/Thor"/></label>
+          <label for="myCheckbox9"><strong>Toras</strong></label>
+        </li>
+    </ul>
+
+</section>
+
+<!----------Footer----------->
+
+<section class="footer">
+    <h2>Nuorodos</h2>
+    <p>Pateikiame nuorodas į aktualiausius puslapius.</p>
+
+    <div class="row">
+        <div class="column"><a href="https://teams.microsoft.com/_#/school/conversations/4?threadId=19:63dc818b06224744989dcf8fe9a6d0c1@thread.tacv2&ctx=channel"><i class="fa-solid fa-people-group"></i></a></div>
+        <div class="column"><a href="https://moodle.ktu.edu/course/view.php?id=3169"><i class="fa-solid fa-book"></i></a></div>
+    </div>
+</section>
+
+</body>
+
+<script>
+    function changeQuantity(value) {
+      var input = document.querySelector('.quantity-input');
+      var currentQuantity = parseInt(input.value);
+      var newQuantity = currentQuantity + value;
+
+      if (newQuantity < parseInt(input.min) || newQuantity > parseInt(input.max)) {
+        return;
+      }
+
+      input.value = newQuantity;
+    }
+</script>
+
+</html>
