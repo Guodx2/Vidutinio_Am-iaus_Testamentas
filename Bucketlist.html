@@ -2,25 +2,6 @@
 
 <html>
 
-<style>
-input[type = radio], select {
-    float: left;
-    margin-left: 30px;
-    margin-top: 15px;
-}
-input[type = text], select {
-        width: 60%;
-        padding: 12px 20px;
-        margin-left: 50px;
-        border: 1px solid rgba(140, 24, 31, 1);
-        border-radius: 4px;
-        box-sizing: border-box;
-        float: left;
-        width: 20%;
-    }
-</style>
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -39,7 +20,7 @@ input[type = text], select {
 
 <!-----------Header----------->
 <body>
-<section class="header">
+<section class="header-laidojimas">
     <nav>
         <a href="Home.html"><img src="images/logo1.png"></a>
         <div class="menu-bar">
@@ -55,17 +36,32 @@ input[type = text], select {
             </div>
         </div>
     </nav>
-
-    <!----------Gauta religija----------->
-    <section class="uzpildytas-klausimynas">
-        <h1 style="font-size:24px">Dėkojame už Jūsų atsakymus!</h1>
-        <div class="religija">
-            <h2>Jums tinkama religija yra:</h2>
-            <h2>JUDAIZMAS</h2>
-        </div>
-        <a href="Laidojimo budai.html"><button class="button-img-select">Pasirinkti laidojimo būdą</button></a>
-    </section>
 </section>
+
+<!----------Svečių sąrašas----------->
+
+<section class="bucketlist">
+    <label class="sveciai" for="story"><strong>🍺 Čia galite matyti ir susidaryti savo darbų, kuriuos norite atlikti prieš numirštant, sąrašą</strong></label>
+    <textarea id="buck" name="story" rows="20" cols="33">
+        ⬜ Pasiplaukiojimas su rykliais dėvint balerinos sijoną
+        ⬜ Aplankyti kiekvieną žemyną per 30 dienų
+        ⬜ Šokimas su virve nuo Eifelio bokšto
+        ⬜ Sniego mūšis paplūdimyje
+        ⬜ Išmokti 10 kalbų per vienerius metus
+        ⬜ Padaryti tikro dydžio Taj Mahal modelį iš guminukų
+        ⬜ Aplankyti visus pasaulio aukščiausius pastatus ir užlipti į 
+              kiekvieną iš jų
+        ⬜ Pastatyk namelį medyje, kuris galėtų apgyvendinti visą kaimą
+        ⬜ Safaryje pagauti liūtą plikomis rankomis
+        ⬜ Šampano vonia
+        ⬜ Piknikas Everesto viršūnėje
+        ⬜ Su mašina nuvažiuoti nuo skardžio ir nusileisti (optional) saugiai
+        ...
+    </textarea>
+    <br>
+    <a href=""><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti svečių sąrašą</button></a>
+</section>
+
 
 <!----------Footer----------->
 
@@ -80,5 +76,19 @@ input[type = text], select {
 </section>
 
 </body>
+
+<script>
+    function changeQuantity(value) {
+      var input = document.querySelector('.quantity-input');
+      var currentQuantity = parseInt(input.value);
+      var newQuantity = currentQuantity + value;
+
+      if (newQuantity < parseInt(input.min) || newQuantity > parseInt(input.max)) {
+        return;
+      }
+
+      input.value = newQuantity;
+    }
+</script>
 
 </html>

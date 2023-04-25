@@ -3,10 +3,6 @@
 <html>
 
 <style>
-    *{
-        color: rgba(11, 47, 71, 1);
-    }
-
     ul {
         list-style-type: none;
         background-color: rgba(232, 136, 115, 0.3);
@@ -92,23 +88,24 @@
 
 <!-----------Header----------->
 <body>
-<section class="header-laidojimas">
-    <nav>
-        <a href="Home.html"><img src="images/logo1.png"></a>
-        <div class="menu-bar">
-            <a href="Laidojimo budai.html"><button class="menu-button"><i class="fa-solid fa-church"></i>Laidojimas</button></a>
-            <a href="Home.html"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
-            <div class="nav-dropdown">
-                <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
-                <div class="nav-dropdown-content">
-                    <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
-                    <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+    <section class="header-laidojimas">
+        <nav>
+            <a href="Home.html"><img src="images/logo1.png"></a>
+            <div class="menu-bar">
+                <a href="#klausimynas"><button class="menu-button"><i class="fa-solid fa-church"></i>Laidojimas</button></a>
+                <a href="Home.html"><button class="menu-button"><i class="fa-solid fa-question"></i>Klausimynas</button></a>
+                <div class="nav-dropdown">
+                    <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
+                    <div class="nav-dropdown-content">
+                        <a href="Ivertinimai.html"><i class="fa-solid fa-star" style="padding-right: 15px;"></i>Įvertinimai</a>
+                        <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                        <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</section>
-
+        </nav>
+    </section>
+    
 <!-----------Laidotuviu apeigu organizavimas-------------->
 
 <section class="apeigos">
@@ -124,13 +121,13 @@
         <div class="row-apeigos">
             <div class="column-apeigos">
                 <h4>😭 Pasirinkite raudotojų skaičių</h4><br>
-                <input type="range" value="12" min="0" max="100" style="width:200px" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" value="12" min="0" max="50" style="width:200px" oninput="this.nextElementSibling.value = this.value">
                 <output>12</output>
             </div>
     
             <div class="column-apeigos">
                 <h4>🎤 Pasirinkite giedotojų skaičių</h4><br>
-                <input type="range" value="12" min="0" max="100" style="width:200px" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" value="12" min="0" max="50" style="width:200px" oninput="this.nextElementSibling.value = this.value">
                 <output>12</output>
             </div>
         </div>
@@ -232,7 +229,7 @@
         </li>
     </ul>
 
-    <a href=""><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti apeigų sudarymą</button></a>
+    <a href="Bucketlist.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti apeigų sudarymą</button></a>
 </section>
 
 <!----------Footer----------->
