@@ -1,5 +1,4 @@
 <!DOCTYPE hyml>
-
 <html>
 
 <head>
@@ -17,6 +16,72 @@
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     </link>
 </head>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    
+    .heading {
+      font-size: 25px;
+      margin-right: 25px;
+    }
+    
+    .checked {
+      color: orange;
+    }
+    
+    /* Three column layout */
+    .side {
+      float: left;
+      width: 15%;
+      margin-top:10px;
+    }
+    
+    .middle {
+      margin-top:10px;
+      float: left;
+      width: 70%;
+    }
+    
+    /* Place text to the right */
+    .right {
+      text-align: right;
+    }
+    
+    /* Clear floats after the columns */
+    .row-iv:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* The bar container */
+    .bar-container {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Individual bars */
+    .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+    .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+    .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+    .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+    .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+    
+    /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+    @media (max-width: 400px) {
+      .side, .middle {
+        width: 100%;
+      }
+      .right {
+        display: none;
+      }
+    }
+</style>
 
 <!-----------Header----------->
 <body>
@@ -38,30 +103,251 @@
     </nav>
 </section>
 
-<!----------Svečių sąrašas----------->
+<!----------Įvertinimai----------->
 
-<section class="bucketlist">
-    <label class="sveciai" for="story"><strong>🍺 Čia galite matyti ir susidaryti savo darbų, kuriuos norite atlikti prieš numirštant, sąrašą</strong></label>
-    <textarea id="buck" name="story" rows="20" cols="33">
-        ⬜ Pasiplaukiojimas su rykliais dėvint balerinos sijoną
-        ⬜ Aplankyti kiekvieną žemyną per 30 dienų
-        ⬜ Šokimas su virve nuo Eifelio bokšto
-        ⬜ Sniego mūšis paplūdimyje
-        ⬜ Išmokti 10 kalbų per vienerius metus
-        ⬜ Padaryti tikro dydžio Taj Mahal modelį iš guminukų
-        ⬜ Aplankyti visus pasaulio aukščiausius pastatus ir užlipti į 
-              kiekvieną iš jų
-        ⬜ Pastatyk namelį medyje, kuris galėtų apgyvendinti visą kaimą
-        ⬜ Safaryje pagauti liūtą plikomis rankomis
-        ⬜ Šampano vonia
-        ⬜ Piknikas Everesto viršūnėje
-        ⬜ Su mašina nuvažiuoti nuo skardžio ir nusileisti (optional) saugiai
-        ...
-    </textarea>
-    <br>
-    <a href="Apeigos.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti svečių sąrašą</button></a>
+<section class="ivertinimai">
+    <h1>📝 Palikite teikiamų paslaugų įvertinimą!</h1>
+    <h3>Jūsų įvertinimas padės mums pasiekti kuo geresnę tiek pačios sistemos, tiek laidojimo apeigų kokybę!</h3>
+
+    <form id="feedback" action="">
+        <div class="pinfo">Jūsų asmeninė informacija</div>
+        
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input  name="name" placeholder="John Wick" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <input name="email" type="email" class="form-control" placeholder="john.wick@gmail.com">
+           </div>
+        </div>
+      </div>
+      
+       <div class="pinfo">Įvertinkite mūsų teikiamas paslaugas</div>
+        
+      
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa-solid fa-star"></i></span>
+         <select class="form-control" id="rate">
+            <option value="1star">🍌 -  paslaugos buvo nerangios, artimieji nepatenkinti (pavyzdžiui, velionis buvo išmestas iš karsto)</option>
+            <option value="2stars">👽 - apeigų procesas buvo keistas, daugelis apeigų proceso dalių nepavyko sklandžiai. </option>
+            <option value="3stars">&#9904;&#65039; - pavyko palaidoti, velionis gali ilsėtis ramybėje, tačiau galėjo būti kur kas sklandesnės laidotuvės.</option>
+            <option value="4stars">&#10084;&#65039; - pakankamai geros apeigos, tačiau šiek tiek nesklandumų visgi iškilo.</option>
+            <option value="5stars">🙏 - amen-zing; artimieji meldžiasi ir už kūrėjų, ir už sistemos savininko sveikatą, gerovę bei, žinoma, už velionį.</option>
+          </select>
+          </div>
+        </div>
+      </div>
+      
+       <div class="pinfo">Palikite komentarą</div>
+
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+        <textarea class="form-control" id="review" rows="3"></textarea>
+       
+          </div>
+        </div>
+      </div>
+    </form>
+    <br><br>
+    <a href="#kitiIvertinimai"><button class="button-img-select"><i class="fa-solid fa-check" style="margin-right:15px"></i>Pateikti</button></a>
 </section>
 
+<section class ="kitiIvertinimai" id="kitiIvertinimai">
+    <div class="iverciai">
+        <h1>Kiti įvertinimai</h1>
+        <p>&#10084;&#65039; vidutinis įvertis iš 254 įvertinimų.</p>
+        <br>
+        <hr style="border:3px solid rgba(11, 47, 71, 0.7)">
+        <br>
+
+        <div class="row-iv">
+            <div class="side">
+                <div>🙏</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                <div class="bar-5"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>150</div>
+            </div>
+            <br><br><br>
+            <div class="side">
+                <div>&#10084;&#65039;</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                <div class="bar-4"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>63</div>
+            </div>
+            <br><br><br>
+            <div class="side">
+                <div>&#9904;&#65039;</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                <div class="bar-3"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>15</div>
+            </div>
+            <br><br><br>
+            <div class="side">
+                <div>👽</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                <div class="bar-2"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>6</div>
+            </div>
+            <br><br><br>
+            <div class="side">
+                <div>🍌</div>
+            </div>
+            <div class="middle">
+                <div class="bar-container">
+                <div class="bar-1"></div>
+                </div>
+            </div>
+            <div class="side right">
+                <div>20</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bucketlist" style="background-color: rgba(11, 47, 71, 0.7); height:700px">
+    <label class="sveciai" style="color:#fff" for="story"><strong>💬 Čia galite peržiūrėti kitų žmonių komentarus</strong></label>
+    <br>
+    <!--Testimonials------------------->
+    <section id="testimonials">
+        <!--testimonials-box-container------>
+        <div class="testimonial-box-container">
+            <!--BOX-1-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="images/Person1.jfif" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Mantvydas Mantvydaitis</strong>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <strong style="font-size: 30px;">🙏</strong>
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>Mano brolis susikūrė paskyrą šioje sistemoje, susiorganizavo laidotuves, kokias pats norėjo, ir iš tiesų labai puikiai praėjo apeigos. Pasiilgau brolio 😿</p>
+                </div>
+            </div>
+            <!--BOX-2-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="images/Person2.jfif" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Mantas Mantaitis</strong>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <strong style="font-size: 30px;">🍌</strong>
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>Vienas giminaitis susiorganizavo savo laidotuves šiuo įrankiu, tai šiaip nerekomenduoju, beveik visas laidotuves pramiegojau 😴</p>
+                </div>
+            </div>
+            <!--BOX-3-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="images/Person3.jfif" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Guoda Guodaitė</strong>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <strong style="font-size: 30px;">👽</strong>
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>First 😝</p>
+                </div>
+            </div>
+            <!--BOX-4-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src="images/Person4.jfif" />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Lina Linaitė</strong>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <strong style="font-size: 30px;">&#9904;&#65039;</strong>
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>Na ką galiu pasakyti, laidojome tetos sesers dukros pažįstamos draugės pusseserės žuvį, tai nu taip 50/50... 🤷‍♀️💀</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <a href="Home.html"><button class="uzsakyti"><i class="fa-solid fa-house" style="margin-right:15px"></i>Grįžti į pradžią</button></a>
+</section>
 
 <!----------Footer----------->
 
