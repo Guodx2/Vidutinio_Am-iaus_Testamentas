@@ -38,23 +38,21 @@
     </nav>
 </section>
 
-<!----------Svečių sąrašas----------->
+<!----------Testamentas----------->
 
-<section class="sveciu-sarasas">
+<section class="testamentas">
     <br>
-    <label class="sveciai" for="story"><strong>👨‍👩‍👧‍👦 Čia galite sudaryti savo svečių sąrašą: 👩‍👩</strong></label>
+    <h1 style="font-size: 40px;">📜 Jūsų testamentas</h1>
+    <h2>Žinoma, galite jį redaguoti.</h2>
     <br><br><br>
-    <textarea class="textarea-sveciai" id="story" name="story" rows="5" cols="33">
-        1️⃣ Mantvydas Mantvydaitis
-        2️⃣ Mažvydas Mažvydaitis
-        3️⃣ Guoda Guodaitė
-        4️⃣ Mantas Mantaitis
-        5️⃣ Vaidotas Vaidotaitis
-        6️⃣ Lina Linaitė
-        ...
-    </textarea>
+
+    <iframe src="https://docs.google.com/document/d/1GWxFdNxwYQhC_tJ3IxBjdFL9HBZOGNKm/edit" width="80%" height="100%" frameborder="0">This is an embedded <a target="_blank" href="https://office.com%22%3Emicrosoft/ Office"></a> document, powered by <a target="_blank" href="https://office.com/webapps%22%3EOffice"></a>.</iframe>
+    <br><br><br>
+    <h2>🎨 Vizuali Jūsų turto priskyrimo reprezentacija:</h2><br><br>
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81o91DP7SiwvafEedHSfRP0Wqb-9W_nV7SR6paKvOAvwyZqCJQsoYuwV7vP264nBq9oPMvyhn1sxBrWYtqXiz1Cg2U-UGg=s2560">
+
     <br>
-    <a href="Apeigos.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti svečių sąrašą</button></a>
+    <a href="Kainos.html"><button class="uzsakyti"><i class="fa-solid fa-check" style="margin-right:15px"></i>Patvirtinti svečių sąrašą</button></a>
 </section>
 
 
@@ -71,19 +69,5 @@
 </section>
 
 </body>
-
-<script>
-    function changeQuantity(value) {
-      var input = document.querySelector('.quantity-input');
-      var currentQuantity = parseInt(input.value);
-      var newQuantity = currentQuantity + value;
-
-      if (newQuantity < parseInt(input.min) || newQuantity > parseInt(input.max)) {
-        return;
-      }
-
-      input.value = newQuantity;
-    }
-</script>
 
 </html>
