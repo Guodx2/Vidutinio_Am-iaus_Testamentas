@@ -591,7 +591,7 @@ button:hover{
 	background: none;
 	border: 0px;
 	color: #888;
-	font-size: 15px;
+	font-size: 18px;
 	width: auto;
 	margin: 10px 0 0;
 	cursor: pointer;
@@ -657,16 +657,20 @@ button:hover{
 }
 
 .bucketlist li > input[type="checkbox"] {
-	margin: 0 20px 0 30%;
+	margin: 0 40px 0 40px;
 	position: relative;
-	top: 15px;
+	top: 25px;
+    width: 25px;
+    height: 25px;
 }
 
 .bucketlist li > label {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 40px;
+    margin-top: 20px;
 	width: 526px;
 	padding: 0 0 0 11px;
+    margin-right: 300px;
 }
 
 .bucketlist li > input[type="text"] {
