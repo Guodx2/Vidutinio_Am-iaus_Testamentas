@@ -28,7 +28,7 @@
             <button class="nav-dropbtn"><i class="fa-solid fa-person"></i>Paskyra</button>
             <div class="nav-dropdown-content">
                 <a href="Ivertinimai.html"><i class="fa-solid fa-star" style="padding-right: 15px;"></i>Įvertinimai</a>
-                <a href="Paskyros perziura.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
+                <a href="Paskyros perziura po testamento sugneravimo.html"><i class="far fa-eye" style="padding-right: 15px;"></i>Peržiūrėti</a>
                 <a href="Pradzia.html"><i class="fa-solid fa-right-from-bracket" style="padding-right: 15px;"></i>Atsijungti</a>
             </div>
         </div>
@@ -40,13 +40,13 @@
             <div class="row-reg">
                 <div class="column-reg" style="margin-right: 100px;color:rgba(11, 47, 71, 1); font-size:20px; text-align: justify;">
                     <h4 style="text-align: center; font-size: 30px;">Bendra informacija</h4>
-                    <p>Gauta religija - <strong>Krikščionybės kryptis - LIUTERONYBĖ</strong></p>
+                    <p>Gauta religija - <strong>✞ Krikščionybės kryptis - LIUTERONYBĖ</strong></p>
                     <br>
-                    <p>Pasirinktas laidojimo būdas - <strong>vikingų laidojimas</strong></p>
+                    <p>Pasirinktas laidojimo būdas - <strong>⛵ vikingų laidojimas</strong></p>
                     <br>
-                    <p>Laidojimo vieta - <strong>Švedija</strong></p>
+                    <p>Laidojimo vieta - <strong>🪑📦🪑 Švedija</strong></p>
                     <br><br>
-                    <p>Pasirinkti patiekalai ir jų kiekiai:</p>
+                    <p>🍱🧆 Pasirinkti patiekalai ir jų kiekiai:</p>
                     <br>
                     <pre>
 ▪ Köttbullar - 5 vnt. po 4.2 €
@@ -54,7 +54,7 @@
 ▪ Smörgåstårta - 10 vnt. po 6.9 €
 ▪ Lapskaus - 8 vnt. po 5.5 €
                     </pre>
-                    <p>Kapavietės specifikacija:</p>
+                    <p>🌹🥀 Kapavietės specifikacija:</p>
                     <br>
                     <pre>
 ▪ Valtis atvira - 0 €
@@ -69,9 +69,9 @@
                 <div class="column-reg" style="border-left: 1px solid rgba(11, 47, 71, 1);color:rgba(11, 47, 71, 1); font-size:20px; text-align: justify;">
                     <h4 style="text-align: center; font-size: 30px;">Apeigų pasirinkimai</h4>
                     
-                    <p>Svečių sąrašas sudarytas</p>
+                    <p>👨‍👩‍👧‍👦 Svečių sąrašas sudarytas</p>
                     <br>
-                    <p>Apeigų specifikacija:</p>
+                    <p>🎤🎵 Apeigų specifikacija:</p>
                     <br>
                     <pre>
 ▪ Raudotojų skaičius 15 - 750 €
@@ -81,10 +81,12 @@
 ▪ Apeigų šventės vedėjas Ken-kun - 2000 €
 ▪ Apeigų vedėjas Toras - 3000 €
                     </pre>
-                    <p>Darbų sąrašas sudarytas</p>
+                    <p>🧾💼 Darbų sąrašas sudarytas</p>
                     <br>
                     <p>Testamentas sudarytas ir patvirtintas</p>
                     <div style="text-align: right; margin-top: 200px;"> 
+                        <p id="displayDateTime"></p>
+                        <p>Būsena - neapmokėta</p>
                         <p>Galutinė kaina: 9,121.5 €</p>
                     </div>
                 </div>
@@ -128,6 +130,17 @@
       }
     }
 </script>
+
+<script type="text/javascript">
+    var today = new Date();
+    var day = today.getDay();
+    var daylist = ["Sekmadienis","Pirmadienis","Antradienis","Trečiadienis ","Ketvirtadienis","Penktadienis","Šeštadienis"];
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var dateTime = date;
+     
+    document.getElementById("displayDateTime").innerHTML = dateTime + ' ' + daylist[day];
+   
+    </script>
 
 </body>
 
